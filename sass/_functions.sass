@@ -1,0 +1,5 @@
+@function automaticContrast($bgColor, $textColor)
+    @if lightness($bgColor) < 50%
+        @return lighten($textColor, 30%)
+    @else 
+        @return darken($textColor, 40%)    

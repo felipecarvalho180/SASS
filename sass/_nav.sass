@@ -1,0 +1,56 @@
+
+
+//make a drop-down menu
+nav
+    width: 500px
+    @extend %center
+
+    ul
+        list-style: none
+        padding: 0
+        margin: 0 
+
+    li
+        float: left
+        display: block
+
+        li
+            float: none
+            display: none
+
+        ul 
+            position: absolute
+            
+        
+        //movimento de drop-down
+        &:hover li
+            display: block
+
+            a 
+                color: red           
+        
+    a
+        display: block
+        padding: 6px 12px
+        text-decoration: none
+        background-color: black
+        color: automaticContrast(blue, black)
+        
+
+%mensage
+    padding: 10px
+    width: 160px
+    text-align: center
+    color: #444444
+
+.error
+    border: 1px solid red
+    @extend %mensage
+
+.sucess
+    border: 1px solid green
+    @extend %mensage
+
+.warning
+    border: 1px solid yellow
+    @extend %mensage
